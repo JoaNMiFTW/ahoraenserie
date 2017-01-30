@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-color: #7eb8d6;
+}
+
+.header{
+    margin: auto;
+    margin-top: 50px;
+    width: 1000px;
+    height: 125px;
+    background-image: url(images/header.png);
+}
+
+.login{
+    margin: auto;
+    margin-top: 100px;
+    width: 390px;
+    height: 225px;
+    padding: 20px;
+    background-color: #d7f0fc;
+    border: 2px solid #146f9e;
+}
+
+
+#join{
+    display: block;
+    width: 386px;
+    font-weight: bold;
+}
+
+.login input{
+    text-align: center;
+    font-size: 30px;
+    border: none;
+    height: 60px;
+    width: 300px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+.login input:focus{
+        border: 2px solid black;
+}
+
+.ico-user, .ico-pass{
+    background-color: #7eb8d6;
+    float: left;
+    width: 80px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.ico-user{
+    background-image: url(images/user.png);
+}
+
+.ico-pass{
+    background-image: url(images/key.png);
+}
