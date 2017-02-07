@@ -11,9 +11,9 @@ body{
 .header{
     margin: auto;
     margin-top: 50px;
-    width: 1000px;
-    height: 125px;
-    background-image: url(images/header.png);
+    width: 750px;
+    height: 110px;
+    background-image: url(otros/logo.png);
 }
 
 .login{
