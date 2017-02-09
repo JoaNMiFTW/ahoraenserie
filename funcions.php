@@ -1,6 +1,6 @@
 <?php
 function connexio() {
-    $mysqli = new mysqli('ahoraenserie.myftp.org/phpmyadmin/', 'prova', 'prova', 'ahoraenserie');
+    $mysqli = new mysqli('localhost', 'root', 'root', 'bdxat');
     if ($mysqli->connect_error) {
         die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
     }

@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-	<meta name="Author" content="Joan Miquel">
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <title>Ahoraenserie.net</title>
-</head>
-<body> 
-    <div class="header"></div>
-    <div class="login">
-        <label for="user"><div class="ico-user"></div></label><input type="text" name="user" id="user">
-        <label for="pass"><div class="ico-pass"></div></label><input type="password" name="pass" id="pass">
-        <input type="button" value="LOGIN" name="join" id="join">
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Author" content="Joan Miquel">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Ahoraenserie.net</title>
+        <script>
+            window.onload = function () {
+                document.getElementById("alert").style.visibility = "hidden";
+                document.getElementById("join").onclick = function () {
+                    carrega_dades("comprovar_login.php");
+                };
+            };
+
+            function carrega_dades(url) {
+                var dades;
+                var usuari = document.getElementById("usuari").value;
+                var contrasenya = document.getElementById("contrasenya").value;
+                var parametres = "usuari=" + usuari + "&contrasenya=" + contrasenya;
+
+                dades = new XMLHttpRequest();
+                dades.onreadystatechange = function () {
+                    mostrar_dades(dades)
+                };
+                dades.open("POST", url, true);
+                dades.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                dades.send(parametres);
+            }
+
+            function mostrar_dades(dades) {
+                if (dades.readyState == 4 && dades.status == 200) {
+                    var valor = (JSON.parse(dades.response));
+
+                    if (valor === "registrat") {
+                        //window.location.href="pagina_principal.html";
+                        alert("Registrat");
+                    } else {
+                        document.getElementById("alert").style.visibility = "visible";
+                        document.getElementById("usuari").value = "";
+                        document.getElementById("contrasenya").value = "";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body> 
+        <div class="header"></div>
+        <div id="alert" class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.visibility = 'hidden';">&times;</span> 
+            <strong>Usuari o contrasenya incorrecte</strong>
+        </div>
+        <div class="login">
+            <label for="user"><div class="ico-user"></div></label><input type="text" name="usuari" id="usuari">
+            <label for="pass"><div class="ico-pass"></div></label><input type="password" name="contrasenya" id="contrasenya">
+            <input type="button" value="LOGIN" name="join" id="join">
+        </div>
+    </body>
 </html>
