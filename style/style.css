@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #e6ecf2;
+}
+
+
+/* CAPSALERA */
+/************/
+.capsalera{
+    width: 100%;
+    min-width: 1150px;
+    height: 150px;
+    background-color: #327698;
+}
+
+.capsalera div{
+    height: 100%;
+}
+
+.logo{
+    float: left;
+    width: 30%;
+}
+
+.logo img{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+
+/************************************* CERCADOR */
+.cercador{
+    float: left;
+    width: 50%;
+    min-width: 500px;
+}
+#cercador{
+    float: left;
+    margin-top: 60px;
+    margin-left: 20%;
+    border: 0;
+    width: 350px;
+    height: 35px;
+    padding-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    /* sombra caja texto */
+    -webkit-box-shadow: inset px 2px 1px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.3);
+    -o-box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.3);
+    box-shadow: inset 2px 2px 1px 0px rgba(0,0,0,0.3);
+}
+
+#boto-cercador{
+    float: left;
+    margin-top: 60px;
+    width: 40px;
+    height: 35px;
+    border: 0;
+    background-color: #8f8f8f;
+    background-image: url(../images/lupa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.panell-usuari{
+    float: right;
+    width: 20%;
+    background-color: red;
+}
+
+
+/* BARRA SECCIONS */
+/*****************/
+.seccions{
+    height: 30px;
+    background-color: #25546c;
+    -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.4), 0px 2px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.4), 0px 2px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.4), 0px 2px 5px 0px rgba(0,0,0,0.5);
+}
