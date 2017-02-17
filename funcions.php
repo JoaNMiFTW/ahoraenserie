@@ -1,6 +1,6 @@
 <?php
 function connexio() {
-    $mysqli = new mysqli('localhost', 'root', 'root', 'bdxat');
+    $mysqli = new mysqli('88.26.241.132', 'admin', 'admin123', 'ahoraenserie');
     if ($mysqli->connect_error) {
         die('Connect Error (' . $mysqli->connect_errno . ') ' . $mysqli->connect_error);
     }
