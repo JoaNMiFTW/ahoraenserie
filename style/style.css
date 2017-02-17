@@ -37,6 +37,9 @@ body{
     float: left;
     width: 50%;
     min-width: 500px;
+    background-image: url(../images/flecha-user.png);
+    background-repeat: no-repeat;
+    background-position: right;
 }
 #cercador{
     float: left;
@@ -72,7 +75,50 @@ body{
 .panell-usuari{
     float: right;
     width: 20%;
-    background-color: red;
+    background-color: #4e7d95;
+}
+
+.panell-usuari div{
+    height: 50%;
+}
+
+.usuari div{
+    float: left;
+    height: 100%;
+    width: 70%;
+}
+
+.icono-usuari{
+    width: 30%!important;
+    background-image: url(../images/icono-user.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nom-usuari p{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.opcions div{
+    float: left;
+    width: 33.3%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.upload{
+    background-image: url(../images/upload.png);
+}
+
+.mail{
+    background-image: url(../images/mail.png);
+}
+
+.logout{
+    background-image: url(../images/logout.png);
 }
 
 
