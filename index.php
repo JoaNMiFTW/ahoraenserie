@@ -10,5 +10,4 @@ if (isset($_SESSION["usuari"])){
     include("paginas/index.html");
 }
 
-
 ?>
