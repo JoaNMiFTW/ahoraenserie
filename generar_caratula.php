@@ -7,23 +7,14 @@ if (isset($_SESSION["usuari"])) {
     require_once("funcions.php");
     $connexio = connexio();
 
-    $sql = "select  from usuaris WHERE USUARI='$usuari' AND CONTRASENYA='$contrasenya'";
+    $sql = "select * from archivo";
     $resultat = consulta($connexio, $sql);
 
-    $numeroFilesAfectades = 0;
-
-    $resposta;
-
-    while ($files = mysqli_fetch_array($resultat)) {
-        $numeroFilesAfectades = $files[0];
+    $taula = array();
+    while ($reg = $resultat->fetch_assoc()) {
+        $taula[] = $reg;
     }
 
-    if ($numeroFilesAfectades == 1) {
-        $resposta = "registrat";
-        $_SESSION["usuari"] = $usuari;
-    } else {
-        $resposta = "noRegistrat";
-    }
     header('Content-type: application/json');
-    echo json_encode($resposta);
+    echo json_encode($taula);
 }

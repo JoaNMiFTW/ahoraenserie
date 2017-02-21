@@ -13,7 +13,7 @@ body{
     margin-top: 50px;
     width: 750px;
     height: 110px;
-    background-image: url(../images/header.png);
+    background-image: url(../images/imagenes_web/header.png);
 }
 
 .login{
@@ -60,11 +60,11 @@ body{
 }
 
 .ico-user{
-    background-image: url(../images/user.png);
+    background-image: url(../images/imagenes_web/user.png);
 }
 
 .ico-pass{
-    background-image: url(../images/key.png);
+    background-image: url(../images/imagenes_web/key.png);
 }
 
 #join{
