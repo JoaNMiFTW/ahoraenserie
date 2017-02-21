@@ -42,7 +42,7 @@ body{
     float: left;
     width: 50%;
     min-width: 500px;
-    background-image: url(../images/flecha-user.png);
+    background-image: url(../images/imagenes_web/flecha-user.png);
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -70,7 +70,7 @@ body{
     height: 35px;
     border: 0;
     background-color: #8f8f8f;
-    background-image: url(../images/lupa.png);
+    background-image: url(../images/imagenes_web/lupa.png);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -95,7 +95,7 @@ body{
 
 .icono-usuari{
     width: 30%!important;
-    background-image: url(../images/icono-user.png);
+    background-image: url(../images/imagenes_web/icono-user.png);
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -166,4 +166,27 @@ body{
     -webkit-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#contenidorCaratules{
+    width: 500px;
+}
+
+
+#contenidorCaratules div{
+    float:left;
 }
