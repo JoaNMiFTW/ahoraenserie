@@ -7,7 +7,7 @@ if (isset($_SESSION["usuari"])) {
     require_once("funcions.php");
     $connexio = connexio();
 
-    $sql = "select count(USUARI) from usuaris WHERE USUARI='$usuari' AND CONTRASENYA='$contrasenya'";
+    $sql = "select  from usuaris WHERE USUARI='$usuari' AND CONTRASENYA='$contrasenya'";
     $resultat = consulta($connexio, $sql);
 
     $numeroFilesAfectades = 0;

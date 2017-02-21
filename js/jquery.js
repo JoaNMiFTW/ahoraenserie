@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $("#contingutLogin").show();
     $("#join").click(function () {
         carrega_dades();
     });
@@ -17,7 +16,7 @@ function carrega_dades() {
 
 function mostrar_dades(dades) {
     if (dades === "registrat") {
-        window.location.href = "principal.html";
+        window.location.href = "index.php";
     } else {
         $(alert("Usuari incorrecte"));
         $("#usuari").val("");
