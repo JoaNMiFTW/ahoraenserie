@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     function mostrar_dades(dades) {
         $.each(dades,function (i,caratula){
-            $("#contenidorCaratules").append("<div id='caratula'><img src='"+caratula.imagen+"' width='100' height='150'><div id='caratula-titol'>"+caratula.titulo+"</div></div>");
+            $("#contenidorCaratules").append("<div id='caratula'><img src='"+caratula.imagen+"' width='175' height='250'><div id='caratula-titol'>"+caratula.titulo+"</div></div>");
         });
         
     }

@@ -1,6 +1,6 @@
 ip: 88.26.241.132
-user: prova
-pass: prova
+user: admin
+pass: admin123
 
 
 podeu entrar a nes phpmyadmin

@@ -149,18 +149,21 @@ body{
 
 
 #caratula{
-    height: 225px;
     width: 175px;
     text-align: center;
-    float:left;
-    background-color: red;
+    float: left;
+    background-color: rgba(50, 118, 152, 0.75);
     border: 1px solid black;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    padding-bottom: 5px;
 }
 
 #caratula-titol{
-    
+    font-weight: bold;
+    color: black;
 }
 
 
