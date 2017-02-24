@@ -8,4 +8,5 @@ if (isset($_SESSION["usuari"])) {
 } else {
     include("paginas/index.html");
 }
+
 ?>
