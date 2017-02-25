@@ -15,4 +15,9 @@ $(document).ready(function () {
     }
 
     carrega_dades();
+    
+    
+    $("#boto-cercador").click(function (){
+        
+    })
 });
