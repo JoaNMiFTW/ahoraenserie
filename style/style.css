@@ -36,6 +36,10 @@ body{
     margin-left: 30px;
 }
 
+.logout{
+    cursor: pointer;
+}
+
 
 /************************************* CERCADOR */
 .cercador{
@@ -126,12 +130,35 @@ body{
 
 /* BARRA SECCIONS */
 /*****************/
-.seccions{
+.barra-seccions{
+    display: flex;
     height: 30px;
     background-color: #25546c;
     -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.4), 0px 2px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.4), 0px 2px 5px 0px rgba(0,0,0,0.5);
     box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.4), 0px 2px 5px 0px rgba(0,0,0,0.5);
+}
+
+.seccions{
+    align-self: center;
+    list-style: none;
+    margin: auto;
+}
+
+.seccions li{
+    font-family: pixel;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    float: left;
+    margin-right: 30px;
+    padding-top: 2px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+.seccions li:hover{
+    color: #327698;
+    -webkit-text-stroke: 1px black;
 }
 
 
@@ -142,8 +169,9 @@ body{
 
 
 #contenidorCaratules{
+    float: left;
     background-color: pink;
-    width: 50%;
+    width: 80%;
     overflow-x: hidden;
 }
 
@@ -169,6 +197,13 @@ body{
 
 
 
+#categories{
+    width: 20%;
+    background-color: red;
+    height: 500px;;
+    float: left;
+    overflow-x: hidden;
+}
 
 
 
