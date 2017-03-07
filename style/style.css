@@ -156,6 +156,7 @@ body{
     color: white;
     -webkit-text-stroke: 1px black;
     -moz-text-stroke: 1px black;
+    cursor: pointer;
 }
 
 .seccions li:hover{
