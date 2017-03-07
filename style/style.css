@@ -17,7 +17,7 @@ body{
 /************/
 .capsalera{
     width: 100%;
-    min-width: 1150px;
+    min-width: 1320px;
     height: 150px;
     background-color: #327698;
 }
@@ -77,6 +77,7 @@ body{
     background-image: url(../images/imagenes_web/lupa.png);
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 
@@ -166,7 +167,7 @@ body{
 
 
 .contenidor{
-
+    min-width: 1320px;
 }
 
 
@@ -187,7 +188,7 @@ body{
     float: left;
     background-color: rgba(50, 118, 152, 0.75);
     border: 1px solid black;
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 20px;
     border-radius: 5px;
     color: white;
@@ -209,6 +210,33 @@ body{
     float: left;
 }
 
+#cont-categories{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family: pixel;
+}
+
+#cont-categories header{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+    background-color: azure;
+    font-size: 22px;
+    padding: 10px;
+}
+
+#cont-categories li{
+    padding: 5px 10px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    list-style: none;
+}
+
+#cont-categories li:hover{
+    background-color: aquamarine;
+}
 
 
 
