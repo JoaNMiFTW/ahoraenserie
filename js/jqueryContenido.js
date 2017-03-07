@@ -11,7 +11,7 @@ $(document).ready(function () {
         $.each(dades, function (i, caratula) {
             $("#contenidorCaratules").append("<div id='caratula'><img src='" + caratula.imagen + "' width='175' height='250'><div id='caratula-titol'>" + caratula.titulo + "</div></div>");
         });
-        
+
     }
 
     carrega_dades();
@@ -46,11 +46,32 @@ $(document).ready(function () {
         var valor = "tancar";
 
         function carrega_logout() {
-            $.post("logout.php", "valor=" + valor, function (){
+            $.post("logout.php", "valor=" + valor, function () {
                 window.location.href = "index.php";
             });
         }
 
         carrega_logout();
     });
+
+
+    $("#pelicules").click(function () {
+        var valor = "pelicula";
+        carrega_opcio(valor);
+    });
+    
+    $("#series").click(function () {
+        var valor = "serie";
+        carrega_opcio(valor);
+    });
+
+    function carrega_opcio(valor) {
+        $.post("opcio_contingut.php", "valor=" + valor, function (dades) {
+            borrar_informacio();
+            $.each(dades, function (i, caratula) {
+                $("#contenidorCaratules").append("<div id='caratula'><img src='" + caratula.imagen + "' width='175' height='250'><div id='caratula-titol'>" + caratula.titulo + "</div></div>");
+            });
+        });
+    }
+
 });
