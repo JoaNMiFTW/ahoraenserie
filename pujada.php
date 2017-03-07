@@ -2,8 +2,12 @@
 require_once("funcions.php");
 $connexio = connexio();
 
+//Sql para recoger todas las categorias que hay en la Base de Datos.
 $sql = "select * from categories";
+//Ejecuto la consulta anterior.
 $resultat = consulta($connexio, $sql);
+//Variable que recoge el año actual.
+$anyActural = (new DateTime)->format("Y");
 ?>
 <html>
     <head>
@@ -97,7 +101,7 @@ $resultat = consulta($connexio, $sql);
                 <br><br>
 
                 <label for="any">Any</label>
-                <input type="text" id="any" name="any" placeholder="Any...">
+                <input type="number" id="any" name="any" min="1950" max="<?php echo $anyActural ?>">
                 <br><br>
 
                 <label for="imatge">Imatge</label><br>
