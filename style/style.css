@@ -199,6 +199,11 @@ body{
     padding-bottom: 5px;
 }
 
+#caratula img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 #caratula-titol{
     font-weight: bold;
     color: black;
