@@ -7,16 +7,9 @@ if (isset($_SESSION["usuari"])) {
     require_once("funcions.php");
     $connexio = connexio();
 
-    $valorOpcio = "";
+    $valorCategoria = $_POST["valor"];
 
-    if (isset($_POST["valor"])) {
-        $valorOpcio = $_POST["valor"];
-        $_SESSION["opcio"] = $_POST["valor"];
-    }
-
-
-
-    $sql = "select * from archivo where tipo='" . $valorOpcio . "'";
+    $sql = "select * from archivo where categoria='" . $valorCategoria . "' and tipo='".$_SESSION["opcio"]."'";
     $resultat = consulta($connexio, $sql);
 
     $taula = array();
