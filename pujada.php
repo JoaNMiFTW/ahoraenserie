@@ -18,6 +18,9 @@ $anyActural = (new DateTime)->format("Y");
         <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
         <script>
             $(document).ready(function () {
+                $(".modalUpClose").on("click",function(){
+                    $("#modalUpload").hide();
+                });
                 /*
                  * Script que comprueba que en el textarea
                  * esten escritos como minimo 140 caracteres.
@@ -46,7 +49,9 @@ $anyActural = (new DateTime)->format("Y");
                 });
             });
         </script>
+        
         <style>
+            
             input[type=text], input[type="number"] , select {
                 width: 100%;
                 padding: 12px 20px;
@@ -85,12 +90,13 @@ $anyActural = (new DateTime)->format("Y");
                 font-size: 16px;
                 resize: none;
             }
-
+            /*
             div {
                 border-radius: 5px;
                 background-color: #f2f2f2;
                 padding: 20px;
             }
+            */
 
             /* Caja de alerta */
             .alert {
@@ -120,10 +126,18 @@ $anyActural = (new DateTime)->format("Y");
             .alert p{
                 font-size: 14px;
             }
+            
+            .modalUpClose{
+                float: right;
+            }
+            
         </style>
+        
+        
     </head>
 
     <body>
+        <div class="modalUpClose">X</div>
         <div class="alert" id="alert" style="display: none">
             <span class="closebtn" onclick="this.parentElement.style.display = 'none';">&times;</span> 
 
@@ -135,12 +149,12 @@ $anyActural = (new DateTime)->format("Y");
                     <option value="serie">Serie</option>
                     <option value="pelicula">Pelicula</option>
                 </select>
-                <br><br>
+                <br>
 
 
                 <label for="titol">Títol</label>
                 <input type="text" id="titol" name="titol" placeholder="Títol..." required>
-                <br><br>
+                <br>
 
                 <label for="categoria">Categoria</label><br>
                 <select class="form-control" id="categoria" name="categoria">
@@ -157,22 +171,22 @@ $anyActural = (new DateTime)->format("Y");
                     $connexio->close();
                     ?>
                 </select>
-                <br><br>
+                <br>
                 <label>Descripció</label><br>
                 <textarea id="descripcio" name="descripcio"></textarea>
-                <br><br>
+                <br>
 
                 <label for="duracio">Duració (min)</label><br>
                 <input type="number" id="duracio" name="duracio" min="1" max="999" required>
-                <br><br>
+                <br>
 
                 <label for="any">Any</label>
                 <input type="number" id="any" name="any" min="1950" max="<?php echo $anyActural ?>" required>
-                <br><br>
+                <br>
 
                 <label for="imatge">Imatge</label><br>
                 <input type="file" name="imatge" accept="image/*" required>
-                <br><br>
+                <br>
 
                 <input type="submit" value="Submit">
             </form>
