@@ -81,61 +81,25 @@ $(document).ready(function () {
             $.each(dades, function (i, caratula) {
                 $("#contenidorCaratules").append("<div id='caratula'><img src='" + caratula.imagen + "' width='175' height='250'><div id='caratula-titol'>" + caratula.titulo + "</div></div>");
             });
+            
+            mostra_categories();
         });
     }
     
-    
-    
-    
-    $("#drama").click(function () {
-        var valor = "drama";
-        carrega_categoria(valor);
-    });
-    
-    $("#comedia").click(function () {
-        var valor = "comedia";
-        carrega_categoria(valor);
-    });
-    
-    $("#accion").click(function () {
-        var valor = "accion";
-        carrega_categoria(valor);
-    });
-    
-    $("#aventura").click(function () {
-        var valor = "aventura";
-        carrega_categoria(valor);
-    });
-    
-    $("#terror").click(function () {
-        var valor = "terror";
-        carrega_categoria(valor);
-    });
-    
-    $("#ficcion").click(function () {
-        var valor = "ficcion";
-        carrega_categoria(valor);
-    });
-    
-    $("#romantico").click(function () {
-        var valor = "romantico";
-        carrega_categoria(valor);
-    });
-    
-    $("#musical").click(function () {
-        var valor = "musical";
-        carrega_categoria(valor);
-    });
-    
-    $("#suspense").click(function () {
-        var valor = "suspense";
-        carrega_categoria(valor);
-    });
-    
-    $("#fantasia").click(function () {
-        var valor = "fantasia";
-        carrega_categoria(valor);
-    });
+    function mostra_categories(){
+        $("#categories").empty();
+        $("#categories").load("paginas/categories.html");
+        $.post("retornaCategories.php",function(dades){
+            $.each(dades, function(i, categoria){
+                $("#ul-categories").append("<li class='li-categoria' value='"+categoria.nom+"'>"+categoria.nom+"</li>");
+            });
+            
+            $(".li-categoria").on("click",function(){
+                var valor = $(this).attr("value");
+                carrega_categoria(valor);
+            });
+        });
+    }
     
     function carrega_categoria(valor) {
         $.post("opcio_categories.php", "valor=" + valor, function (dades) {
