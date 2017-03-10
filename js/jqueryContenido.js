@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    
+    $(".upload").on("click",uploadModal);
+
+    
+    
+    function uploadModal(){
+        $("#modalUploadCont").load("pujada.php");
+        $("#modalUpload").show();
+    }
 
     function carrega_dades() {
         $.post("generar_caratula.php", function (dades) {
